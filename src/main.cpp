@@ -1,6 +1,11 @@
 #include<unistd.h>
 #include<iostream>
+#include<fstream>
+#include<string>
+
 using namespace std;
+
+const string VERSION = "1.0.0";
 
 void print_table(int x, int y, bool add){
     for(int i = 1; i <= x; i++){
@@ -11,25 +16,38 @@ void print_table(int x, int y, bool add){
     }
 }
 
+
+void print_help(){
+    
+}
+
 int main(int argc, char *argv[]){
-    int x = 9;
-    int y = 9;
     bool add = false;
     int opt;
-    while((opt = getopt(argc, argv, "ax:y:")) != -1){
+    while((opt = getopt(argc, argv, "hvax:y:")) != -1){
         switch(opt){
-        case 'a' :
+        case 'h':
+            print_help();
+            return 1;
+            break;
+        case 'v': {
+            cout << "kuku version "<< VERSION << endl;
+            return 1;
+            break;
+            }
+        case 'a':
             add=true;
-            break;
-        case 'x':
-            x = atoi(optarg);
-            break;
-        case 'y':
-            y = atoi(optarg);
             break;
         }
     }
-    print_table(x, y, add);
+    if(argc - optind != 2){
+        cout << "Give two integers." << endl;
+    }
+    else{
+        int x = atoi(argv[optind]);
+        int y = atoi(argv[optind + 1]);
+        print_table(x, y, add);
+    }
     return 0;
 }
 
