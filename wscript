@@ -2,7 +2,7 @@ top = '.'
 out = 'build'
 
 APPNAME = 'Kuku'
-VERSION = '0.1.0'
+VERSION = '1.0.0'
 
 def options(opt):
     opt.load('compiler_cxx')
