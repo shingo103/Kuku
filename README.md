@@ -1,7 +1,7 @@
 #Kuku
 
 ## What is Kuku?
-Kuku is a C++ program that accepts two integers from a user and gerenates a *kuku* table, which means multiplication table in Japanese.
+Kuku is a C++ program that receives two integers from a user and outputs a *kuku* table, which means multiplication table in Japanese.
 
 
 ## Installation
@@ -15,14 +15,14 @@ $ ./waf build
 $ ./waf intstall
 ```
 
-By default, compiled program will be installed to `/usr/local/`. You can change the install directory using `--prefix` option for configuration:
+By default, compiled program is installed to `/usr/local/`. You can change the install directory using `--prefix` option for configuration:
 
 ```sh
 $ ./waf configure --prefix=/path/to/install/directory
 ```
 
 ## Quickstart
-Giving two integers will generate *kuku* table:
+Giving two integers will generate a *kuku* table:
 
 ```sh
 $ kuku 9 9
@@ -54,13 +54,12 @@ $ kuku 9 9 -a
 
 You can see help message by `-h` or `--help` option.
 
-## Developer
-This program is developed by Shingo Tomioka at The Department of Computational Biology and Medical Sciences, Graduate School of Frontier Sciences, The University of Tokyo.
-
 
 ## Support
+This program is developed by Shingo Tomioka at The Department of Computational Biology and Medical Sciences, Graduate School of Frontier Sciences, The University of Tokyo.
+
 If you find any bugs, please report to s.tomioka.103 [at] gmail.com
 
 
 ## License
-This program adopts the license of Creative Commons BY.
+The program is licensed under CC BY 3.0.
