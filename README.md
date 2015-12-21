@@ -5,15 +5,12 @@ Kuku is a C++ program that accepts one or two integers from a user and gerenates
 
 
 ## Installation
-Clone this repositry to your local machine.
-
-```sh
-$ git clone https://github.com/shingo103/Kuku.git
-```
+This program uses waf (https://waf.io/) for installation (`waf` is included in the top directory of this repositry and you do not need to install it by yourself).
 
 Configure, compile and install using waf.
 
 ```sh
+$ cd Kuku
 $ ./waf configure
 $ ./waf build
 $ ./waf intstall
