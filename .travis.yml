@@ -4,4 +4,3 @@ compiler:
 script:
   - ./waf configure
   - ./waf build
-  - ./waf install
