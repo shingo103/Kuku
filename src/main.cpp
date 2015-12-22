@@ -3,8 +3,8 @@
 #include "kuku.h"
 
 
-bool is_natural(char* s){
-    char *p = s;
+bool is_natural(const char* s){
+    const char *p = s;
     while(*p != '\0'){
         if(!isdigit(*p)) return false;
         p++;
