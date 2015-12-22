@@ -11,6 +11,6 @@ def configure(conf):
     conf.load('compiler_cxx')
 
 def build(bld):
-    bld.program(source='src/main.cpp', target='kuku')
+    bld.program(source='src/main.cpp src/kuku.cpp', target='kuku')
 
     
