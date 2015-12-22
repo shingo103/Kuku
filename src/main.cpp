@@ -1,4 +1,7 @@
+#include <cstdlib>
+#include <getopt.h>
 #include "kuku.h"
+
 
 bool is_natural(char* s){
     char *p = s;
