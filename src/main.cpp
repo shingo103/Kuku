@@ -1,6 +1,6 @@
 #include "kuku.h"
 
-bool is_int(char* s){
+bool is_natural(char* s){
     char *p = s;
     while(*p != '\0'){
         if(!isdigit(*p)) return false;
@@ -49,10 +49,10 @@ int main(int argc, char *argv[]){
         cerr << "Error: Give two integers." << endl;
         show_help();
         return 1;
-    } else if(!is_int(argv[optind]) || !is_int(argv[optind+1])){
-        if(!is_int(argv[optind]))
+    } else if(!is_natural(argv[optind]) || !is_natural(argv[optind+1])){
+        if(!is_natural(argv[optind]))
             cerr << "Error: Arguments must be integers. '" << argv[optind] << "' was given." << endl;
-        if(!is_int(argv[optind+1]))
+        if(!is_natural(argv[optind+1]))
             cerr << "Error: Arguments must be integers. '" << argv[optind+1] << "' was given." << endl;
         return 1;
     } else {
