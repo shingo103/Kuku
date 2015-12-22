@@ -1,4 +1,7 @@
 .lock*
 .waf*
 src/.*
+src/*.o
+src/kuku
 build/
+.travis.yml
