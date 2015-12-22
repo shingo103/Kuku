@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/shingo103/Kuku.svg?branch=master)](https://travis-ci.org/shingo103/Kuku)
+
 #Kuku
 
 ## What is Kuku?
