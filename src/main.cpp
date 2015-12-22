@@ -30,6 +30,14 @@ void show_help(){
     cerr << "\t-a --add\tadd two integers, not multiply" << endl;
 }
 
+bool is_int(char* s){
+    char *p = s;
+    while(*p != '\0'){
+        if(!isdigit(*p)) return false;
+        p++;
+    }
+    return true;
+}
 
 int main(int argc, char *argv[]){
     struct option longopts[] = {
@@ -57,8 +65,14 @@ int main(int argc, char *argv[]){
     if(argc - optind != 2){
         cerr << "Error: Give two integers." << endl;
         show_help();
-    }
-    else{
+        return 1;
+    } else if(!is_int(argv[optind]) || !is_int(argv[optind+1])){
+        if(!is_int(argv[optind]))
+            cerr << "Error: Arguments must be integers. '" << argv[optind] << "' was given." << endl;
+        if(!is_int(argv[optind+1]))
+            cerr << "Error: Arguments must be integers. '" << argv[optind+1] << "' was given." << endl;
+        return 1;
+    } else {
         int x = atoi(argv[optind]);
         int y = atoi(argv[optind + 1]);
         print_table(x, y, add_flag);
