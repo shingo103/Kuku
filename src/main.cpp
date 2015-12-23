@@ -37,12 +37,10 @@ int main(int argc, char *argv[]){
         switch(opt){
         case 'h':
             show_help();
-            return 1;
-            break;
+            exit(0);
         case 'v':
             cout << "kuku version "<< VERSION << endl;
-            return 1;
-            break;
+            exit(0);
         case 'a':
             add_flag=true;
             break;
@@ -51,13 +49,13 @@ int main(int argc, char *argv[]){
     if(argc - optind != 2){
         cerr << "Error: Give two integers." << endl;
         show_help();
-        return 1;
+        exit(1);
     } else if(!is_natural(argv[optind]) || !is_natural(argv[optind+1])){
         if(!is_natural(argv[optind]))
             cerr << "Error: Arguments must be integers. '" << argv[optind] << "' was given." << endl;
         if(!is_natural(argv[optind+1]))
             cerr << "Error: Arguments must be integers. '" << argv[optind+1] << "' was given." << endl;
-        return 1;
+        exit(1);
     } else {
         int x = atoi(argv[optind]);
         int y = atoi(argv[optind + 1]);
