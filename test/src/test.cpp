@@ -12,6 +12,7 @@ TEST(IsNaturalTest, IsNaturalTestFalse)
     EXPECT_FALSE(is_natural((const char*)string("1.3").c_str()));
     EXPECT_FALSE(is_natural((const char*)string("-1").c_str()));
     EXPECT_FALSE(is_natural((const char*)string("abc").c_str()));
+    EXPECT_FALSE(is_natural((const char*)string("def").c_str()));
     
 }
 
