@@ -64,4 +64,4 @@ If you find any bugs, please report to s.tomioka.103 [at] gmail.com
 
 
 ## License
-The program is licensed under CC BY 3.0.
+This program is distributed under the MIT Licence, see LICENSE.txt.
