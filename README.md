@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/shingo103/Kuku.svg?branch=master)](https://travis-ci.org/shingo103/Kuku)
+[![Build Status](https://travis-ci.org/stomk/Kuku.svg?branch=master)](https://travis-ci.org/stomk/Kuku)
+
+This repository was used to learn GitHub in a collage course.
 
 #Kuku
 
